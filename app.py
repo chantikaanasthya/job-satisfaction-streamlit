@@ -11,7 +11,7 @@ st.set_page_config(page_title="Employee Satisfaction", layout="wide")
 # --- Load Dataset ---
 @st.cache_data
 def load_data():
-    return pd.read_csv("assignment_employee_survey.csv")
+    return pd.read_csv("cleaned_employeesurvey.csv")
 
 df = load_data()
 
