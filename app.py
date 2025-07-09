@@ -3,7 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# 🎨 Konsisten styling & palette
+# Konsisten styling & palette
 sns.set_style("whitegrid")
 sns.set_palette("Set2")
 st.set_page_config(page_title="Employee Satisfaction", layout="wide")
@@ -147,7 +147,7 @@ elif page == "📝 Predict Satisfaction":
     st.markdown("Input your work conditions to see a predicted satisfaction score and feedback.")
 
     with st.form("form_satisfaction"):
-        st.subheader("🧪 Personal Information ")
+        st.subheader("🪪 Personal Information ")
         emp_type = st.selectbox("Employment Type", ["Full-Time", "Part-Time", "Contract"])
         dept = st.selectbox("Department", sorted(df["dept"].unique()))
         experience = st.slider("Years of Experience", 0, 40, 5)
