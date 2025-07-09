@@ -23,7 +23,7 @@ page = st.sidebar.radio("Go to", ["📊 Dashboard", "📝 Predict Satisfaction"]
 # =============== DASHBOARD ===============
 # ==========================================
 if page == "📊 Dashboard":
-    st.title(" Welcome to Employee Job Satisfaction Dashboard")
+    st.title("Welcome to Employee Job Satisfaction Dashboard 📊")
 
     st.markdown("""
     ### About This Dashboard
