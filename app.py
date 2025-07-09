@@ -23,14 +23,14 @@ page = st.sidebar.radio("Go to", ["📊 Dashboard", "📝 Predict Satisfaction"]
 # =============== DASHBOARD ===============
 # ==========================================
 if page == "📊 Dashboard":
-    st.title("📊 Employee Job Satisfaction Dashboard")
+    st.title(" Welcome to Employee Job Satisfaction Dashboard")
 
     st.markdown("""
-    ### 🧠 About This Dashboard
+    ### About This Dashboard
 
     This interactive dashboard presents an in-depth analysis of employee job satisfaction, based on survey data covering various work-related and lifestyle attributes.
 
-    It aims to help **HR teams, analysts, and management** understand what factors most influence employee satisfaction — such as:
+    It aims to help **HR teams, analysts, and management** to understand what factors most influence employee satisfaction — such as:
     - Work-Life Balance (WLB)
     - Work Environment
     - Stress & Sleep Patterns
@@ -78,11 +78,11 @@ if page == "📊 Dashboard":
         ax4.set_title("Experience vs Satisfaction")
         st.pyplot(fig4)
 
-    st.subheader("💡 Key Insights")
+    st.subheader("💡 Insights")
     st.markdown("""
     - **Work-Life Balance (WLB)** and **Work Environment** are strong positive contributors to satisfaction.
     - High **workload** and **stress** reduce satisfaction levels.
-    - Mid-career employees (~10-15 years) tend to report the highest satisfaction.
+    - Mid-career employees (10-15 years) tend to report the highest satisfaction.
     - Full-Time workers are generally more satisfied than Part-Time or Contract workers.
     """)
 
@@ -94,7 +94,7 @@ elif page == "📝 Predict Satisfaction":
     st.markdown("Input your work conditions to see a predicted satisfaction score and feedback.")
 
     with st.form("form_satisfaction"):
-        st.subheader("🧑 Personal Info")
+        st.subheader("🪪 Personal Information ")
         emp_type = st.selectbox("Employment Type", ["Full-Time", "Part-Time", "Contract"])
         dept = st.selectbox("Department", sorted(df["dept"].unique()))
         experience = st.slider("Years of Experience", 0, 40, 5)
@@ -106,7 +106,7 @@ elif page == "📝 Predict Satisfaction":
         stress = st.slider("Stress Level (1 = Calm, 10 = Overwhelming)", 1, 10, 5)
         sleep_hours = st.slider("Sleep Hours per Day", 0.0, 12.0, 7.0, step=0.5)
 
-        submitted = st.form_submit_button("🔮 Predict")
+        submitted = st.form_submit_button("**PREDICT**")
 
     if submitted:
         # Simple heuristic-based prediction
